@@ -51,7 +51,7 @@ function report(path, text) {
     }
   } else {
     textMap[text] = {
-      id: idCache[text] || getTextId(),
+      id: idCache[text] || getTextId(text),
       text,
       loc: [loc],
     }
@@ -165,7 +165,7 @@ export default function ({ types: t }) {
 
       StringLiteral(path) {
         const { node } = path
-        const text = node.value
+        const text = node.value.trim()
 
         if (node.loc && detectAndReport(path, text)) {
           const item = textMap[text]

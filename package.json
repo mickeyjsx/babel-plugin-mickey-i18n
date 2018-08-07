@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-mickey-i18n",
   "version": "1.0.0",
-  "description": "Scan and replace characters with i18n-formatter.",
+  "description": "Extract i18n message files and replace text with i18n-formatter.",
   "main": "./lib/index.js",
   "keywords": [
     "mickey",
@@ -48,14 +48,12 @@
   "peerDependencies": {
     "react": "*",
     "react-dom": "*",
-    "react-intl": "*"
+    "react-intl": "*",
+    "mickey-i18n": "*"
   },
   "dependencies": {
-    "atool-l10n": "^0.3.1",
     "fs-extra": "^7.0.0",
-    "invariant": "^2.2.4",
     "lodash.isfunction": "^3.0.9",
-    "lodash.isregexp": "^4.0.1",
-    "warning": "^4.0.1"
+    "lodash.isregexp": "^4.0.1"
   }
 }

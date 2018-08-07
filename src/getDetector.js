@@ -9,16 +9,15 @@ export default function getDetector({ pattern }) {
   if (pattern) {
     if (isFunction(pattern)) {
       detector = pattern
-    }
-
-    if (isRegExp(pattern)) {
+    } else if (isRegExp(pattern)) {
       detector = text => pattern.test(text)
+    } else {
+      detector = text => pattern === text
     }
-
-    detector = text => pattern === text
+  } else {
+    detector = text => /[\u4e00-\u9fa5]/.test(text)
   }
 
-  detector = text => /[\u4e00-\u9fa5]/.test(text)
 
   const cache = {}
   return (text) => {
