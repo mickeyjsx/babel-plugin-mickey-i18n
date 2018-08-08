@@ -35,7 +35,7 @@ export default class HelloI18n extends React.Component {
 }
 ```
 
-Compiled with this plugin, result that all the Chinese characters in this component ware replaced with `_i18n` mathod which exported from [mickey-i18n](https://github.com/mickeyjsx/mickey-i18n)(the client for localized messages):
+Compile with this plugin, result that all the Chinese characters in this component ware replaced with `_i18n` mathod which exported from [mickey-i18n](https://github.com/mickeyjsx/mickey-i18n)(the client for localized messages):
 
 ```jsx
 import { i18n as _i18n } from "mickey-i18n";

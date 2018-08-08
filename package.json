@@ -6,16 +6,20 @@
   "keywords": [
     "mickey",
     "i18n",
+    "auto",
     "babel",
     "plugin",
     "babel-plugin"
   ],
+  "author": {
+    "name": "bubkoo",
+    "email": "bubkoo.wy@gmail.com"
+  },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mickeyjsx/babel-plugin-mickey-i18n.git"
   },
-  "author": "",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mickeyjsx/babel-plugin-mickey-i18n/issues"
   },
@@ -24,11 +28,10 @@
     "lib"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext .js,.jsx src",
     "build": "rimraf lib && babel src --out-dir lib",
     "prebuild": "npm run lint",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "precommit": "npm run lint"
   },
   "devDependencies": {
