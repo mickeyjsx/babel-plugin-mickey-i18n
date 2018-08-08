@@ -206,13 +206,14 @@ export default function ({ types: t }) {
         if (text && detectAndReport(path, text)) {
           const item = textMap[text]
           const i18nKey = String(item && item.id)
+          const isProduction = process.env.NODE_ENV === 'production'
           path.replaceWith(
             t.JSXExpressionContainer(
               t.CallExpression(
                 t.Identifier(i18nMethodName),
                 [
                   t.stringLiteral(i18nKey),
-                  t.stringLiteral(text),
+                  isProduction ? null : t.stringLiteral(text),
                   t.arrayExpression([]),
                   t.booleanLiteral(true),
                 ],

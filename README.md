@@ -2,7 +2,7 @@
 
 > Scan and replace characters with i18n-formatter.
 
-[React Intl](https://github.com/yahoo/react-intl) is awesome. But, [definemessages](https://github.com/yahoo/react-intl/wiki/API#definemessages) is hard-coding, also Global ID management is difficult and confusing.
+[React Intl](https://github.com/yahoo/react-intl) is awesome. But, [defineMessages](https://github.com/yahoo/react-intl/wiki/API#definemessages) is hard-coding, also Global ID management is difficult and confusing.
 
 This plugin releases you from tedious codings, helps you building react components without any perceptions of i18n.
 
@@ -35,7 +35,7 @@ export default class HelloI18n extends React.Component {
 }
 ```
 
-Compile with this plugin, result that all the Chinese characters in this component ware replaced with `_i18n` mathod which exported from [mickey-i18n](https://github.com/mickeyjsx/mickey-i18n)(the client for localized messages):
+Compiled with this plugin, result that all the Chinese characters in this component ware replaced with `_i18n` mathod which exported from [mickey-i18n](https://github.com/mickeyjsx/mickey-i18n)(the client for localized messages):
 
 ```jsx
 import { i18n as _i18n } from "mickey-i18n";
@@ -65,7 +65,7 @@ export default class HelloI18n extends React.Component {
 }
 ```
 
-We also get a message file like this:
+We also get a message file like this, the id is the text's hashcode:
 
 ```json
 [
