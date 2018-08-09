@@ -131,7 +131,12 @@ export default function ({ types: t }) {
           if (fileCache) {
             path.node.body.unshift(
               t.importDeclaration(
-                [t.ImportSpecifier(t.identifier(i18nMethodName), t.identifier('i18n'))],
+                [
+                  t.ImportSpecifier(
+                    t.identifier(i18nMethodName),
+                    t.identifier('i18n'),
+                  ),
+                ],
                 t.stringLiteral('mickey-i18n'),
               ),
             )
