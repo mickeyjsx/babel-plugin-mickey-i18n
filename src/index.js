@@ -177,7 +177,10 @@ export default function ({ types: t }) {
               t.JSXExpressionContainer(
                 t.CallExpression(
                   t.Identifier(i18nMethodName),
-                  [t.stringLiteral(i18nKey), t.stringLiteral(text)],
+                  [
+                    t.stringLiteral(i18nKey),
+                    t.stringLiteral(text),
+                  ],
                 ),
               ),
             )
@@ -193,7 +196,10 @@ export default function ({ types: t }) {
             path.replaceWith(
               t.CallExpression(
                 t.Identifier(i18nMethodName),
-                [t.stringLiteral(i18nKey), t.stringLiteral(text)],
+                [
+                  t.stringLiteral(i18nKey),
+                  t.stringLiteral(text),
+                ],
               ),
             )
           }
@@ -214,8 +220,6 @@ export default function ({ types: t }) {
                 [
                   t.stringLiteral(i18nKey),
                   t.stringLiteral(text),
-                  t.arrayExpression([]),
-                  t.booleanLiteral(true),
                 ],
               ),
             ),
