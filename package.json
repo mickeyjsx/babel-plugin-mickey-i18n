@@ -1,6 +1,6 @@
 {
-  "name": "babel-plugin-mickey-i18n-scanner",
-  "version": "1.0.2",
+  "name": "babel-plugin-mickey-i18n",
+  "version": "1.0.0",
   "description": "Extract i18n message files and replace text with i18n-formatter.",
   "main": "./lib/index.js",
   "keywords": [
@@ -18,12 +18,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mickeyjsx/babel-plugin-mickey-i18n-scanner.git"
+    "url": "git+https://github.com/mickeyjsx/babel-plugin-mickey-i18n.git"
   },
   "bugs": {
-    "url": "https://github.com/mickeyjsx/babel-plugin-mickey-i18n-scanner/issues"
+    "url": "https://github.com/mickeyjsx/babel-plugin-mickey-i18n/issues"
   },
-  "homepage": "https://github.com/mickeyjsx/babel-plugin-mickey-i18n-scanner#readme",
+  "homepage": "https://github.com/mickeyjsx/babel-plugin-mickey-i18n#readme",
   "files": [
     "lib"
   ],

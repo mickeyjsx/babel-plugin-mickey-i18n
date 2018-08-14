@@ -1,4 +1,4 @@
-# babel-plugin-mickey-i18n-scanner
+# babel-plugin-mickey-i18n
 
 > Extract i18n message files and replace text with i18n-formatter.
 
@@ -93,7 +93,7 @@ Then we can use [atool-l10n](https://github.com/ant-tool/atool-l10n) to automati
 ## Install
 
 ```bash
-npm install babel-plugin-mickey-i18n-scanner --save-dev
+npm install babel-plugin-mickey-i18n --save-dev
 npm install mickey-i18n react react-dom react-intl --save
 ```
 
@@ -117,4 +117,4 @@ Add the following section in your .babelrc:
 
 Pull requests and stars are highly welcome.
 
-For bugs and feature requests, please [create an issue](https://github.com/mickeyjsx/babel-plugin-mickey-i18n-scanner/issues/new).
+For bugs and feature requests, please [create an issue](https://github.com/mickeyjsx/babel-plugin-mickey-i18n/issues/new).
