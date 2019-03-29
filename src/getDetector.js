@@ -21,6 +21,9 @@ export default function getDetector({ pattern }) {
 
   const cache = {}
   return (text) => {
+    if (text === '__proto__') { // __proto__ property could not be set, it's value of 'cache' is always {}
+      return false
+    }
     if (!hasOwn(cache, text)) {
       cache[text] = !!detector(text)
     }
