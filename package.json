@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-mickey-i18n",
-  "version": "1.0.2-beta.0",
+  "version": "1.0.2-beta.1",
   "description": "Extract i18n message files and replace text with i18n-formatter.",
   "main": "./lib/index.js",
   "keywords": [
