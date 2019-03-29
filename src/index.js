@@ -38,33 +38,26 @@ function init(opts) {
 }
 
 function report(path, text) {
-  let textKey = text
-
   const { node } = path
   const { line, column } = node.loc.start
   const { filename } = path.hub.file.opts
   const filepath = relative(process.cwd(), filename)
   const loc = `${filepath}#${line}#${column}`
-
-  if (textMap[textKey] && !Object.prototype.hasOwnProperty.call(textMap, textKey)) {
-    textKey = `I${text}`
-  }
-
-  const cache = textMap[textKey]
+  const cache = textMap[text]
 
   if (cache) {
     if (!cache.loc.includes(loc)) {
       cache.loc.push(loc)
     }
   } else {
-    textMap[textKey] = {
+    textMap[text] = {
+      id: idCache[text] || getTextId(text),
       text,
-      id: (Object.prototype.hasOwnProperty.call(idCache, text) && idCache[text]) || getTextId(text),
       loc: [loc],
     }
   }
 
-  const { id } = textMap[textKey]
+  const { id } = textMap[text]
   const item = {
     id, text, line, column,
   }
