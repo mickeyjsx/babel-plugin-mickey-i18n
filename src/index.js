@@ -102,7 +102,8 @@ function clean(filename) {
 }
 
 function detectAndReport(path, text) {
-  if (detectFn(text)) {
+  const { filename } = path.hub.file.opts
+  if (detectFn(text, filename)) {
     return report(path, text)
   }
 
@@ -234,7 +235,8 @@ export default function ({ types: t }) {
 
       TemplateLiteral(path) {
         const { node } = path
-        const exist = node.quasis.some(item => detectFn(item.value.raw))
+        const { filename } = path.hub.file.opts
+        const exist = node.quasis.some(item => detectFn(item.value.raw, filename))
 
         if (exist) {
           const arr = [

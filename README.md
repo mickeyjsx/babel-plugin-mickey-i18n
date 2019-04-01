@@ -109,9 +109,10 @@ Add the following section in your .babelrc:
 
 ## Options
 
-- `dest` The target directory of message file. Default: `./i18n_messages`
-- `filename` The target file name of message file. Default: `i18n.json`
-- `debug` If `true` we will get message files of each component. Default: `false`
+- `dest: string;` The target directory of message file. Default: `./i18n_messages`
+- `filename: string;` The target file name of message file. Default: `i18n.json`
+- `debug: boolean;` If `true` we will get message files of each component. Default: `false`
+- `exclude: RegExp | RegExp[];` Prevent mickey-i18n parsing any file if its path matches the RegExp(s) provided. Default: `false`
 
 ## Contributing
 
